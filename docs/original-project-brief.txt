@@ -1,0 +1,1023 @@
+Build an Interactive Web Prototype: White Box, Values-Guided Ethical Learning
+
+1. Project Overview
+
+Build a polished, fully interactive, desktop-first web prototype for an educational platform called White Box.
+
+White Box helps K–12 students develop AI literacy and learn to use artificial intelligence thoughtfully and responsibly.
+
+This prototype focuses on one feature: Values-Guided Ethical Learning.
+
+Our primary persona is Sarah, a Grade 10 student.
+
+The purpose is to help students:
+
+1. Explore and understand ethical values.
+2. Develop their own interpretations of these values.
+3. Recognize how values relate to responsible AI use.
+4. Practice ethical reasoning through realistic dilemmas.
+5. Understand that different values can sometimes conflict.
+6. Reflect on their decisions and reconsider their priorities.
+7. Gradually build a personalized AI Values Guide.
+8. Continue revising that guide throughout their learning journey.
+
+Core design philosophy:
+
+The Values Guide is a living artifact, not a one-time assignment.
+
+Students should be able to develop, apply, question, and revise their understanding of ethical values over time.
+
+The platform must encourage independent thinking rather than prescribe one universally correct ethical answer.
+
+2. Technical Requirements
+
+Build this as a working web application.
+
+Preferred stack:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Vite
+* Lucide React icons
+* LocalStorage for persistence
+
+Use a clean component-based architecture.
+
+The prototype does not require authentication, a database, or a backend.
+
+All interactions should work with realistic local state.
+
+Do not create static screenshots or placeholder interactions.
+
+Every visible button should have a meaningful function.
+
+Use responsive layouts, but prioritize a desktop viewport around 1440px wide.
+
+Use accessible HTML controls, keyboard navigation, clear focus states, and sufficient color contrast.
+
+3. Visual Design
+
+Use the attached storyboard as a visual reference, but create a more refined and consistent interactive interface.
+
+The visual direction should feel:
+
+* Warm
+* Friendly
+* Thoughtful
+* Approachable
+* Educational
+* Creative
+* Appropriate for students aged approximately 14–16
+
+Avoid overly childish visuals, corporate dashboards, or generic AI-generated aesthetics.
+
+Color palette
+
+Use warm off-white as the primary background.
+
+Suggested colors:
+
+* Background: #FAF7F2
+* Main text: #292524
+* Lavender: #E9DDF8
+* Purple accent: #7655B5
+* Soft yellow: #FFE7A3
+* Sage green: #DDEED9
+* Soft blue: #DCEBFA
+* Soft pink: #F8DDDC
+* Peach: #FBE3D0
+
+Use dark outlines sparingly for structure and clarity.
+
+Use rounded cards, subtle shadows, friendly typography, and consistent spacing.
+
+Use a clean sans-serif font such as Nunito or DM Sans.
+
+Value colors
+
+Each ethical value should have a recognizable color and icon.
+
+Value	Color	Icon
+Honesty	Yellow	Star
+Independence	Green	Sprout
+Fairness	Blue	Balance scale
+Privacy	Lavender	Shield
+Respect	Pink	Heart
+Responsibility	Peach	Lightbulb
+
+These colors should remain consistent throughout the entire application.
+
+Do not use color alone to communicate meaning.
+
+4. Application Layout
+
+Use a persistent left sidebar.
+
+Navigation:
+
+* Home
+* Lessons
+* Values Studio
+* My Guide
+* Settings
+
+The active page should be clearly highlighted.
+
+The top-right corner should contain Sarah’s profile:
+
+* Avatar
+* Sarah
+* Grade 10
+
+Clicking the profile opens a small menu containing:
+
+* My Profile
+* My Learning Journey
+* Settings
+
+Avoid unnecessary icons or decorative controls without a clear purpose.
+
+The application should have a consistent navigation structure across all screens.
+
+⸻
+
+5. Screen 1: Home Dashboard
+
+Title:
+
+Hi, Sarah!
+
+Subtitle:
+
+“Explore what matters to you, think through tricky choices, and build your own guide for using AI.”
+
+Display three main cards:
+
+Explore Values
+
+“Learn about different values and what they might mean when using AI.”
+
+Button: Explore Values
+
+Try a Dilemma
+
+“Practice making decisions when there isn’t an easy answer.”
+
+Button: Try a Dilemma
+
+My Values Guide
+
+“See the values and guidelines you’ve been building.”
+
+Button: Open My Guide
+
+Below these cards, show a section titled:
+
+Your Learning Journey
+
+Display neutral progress information:
+
+* Values explored
+* Dilemmas completed
+* Reflections saved
+
+Do not calculate or display an ethical responsibility score.
+
+⸻
+
+6. Screen 2: Explore Values
+
+Title:
+
+Explore Values
+
+Subtitle:
+
+“Values are ideas about what matters to us. They can help us think through decisions, especially when the answer isn’t simple.”
+
+Display six interactive value cards.
+
+Each card includes:
+
+* Icon
+* Value name
+* Short definition
+* Button: Explore This Value
+
+Values and definitions
+
+Honesty
+
+“Being truthful about what you do, say, and share.”
+
+Independence
+
+“Thinking for yourself and making your own decisions, even when you receive help.”
+
+Fairness
+
+“Considering whether people have fair opportunities and are treated justly.”
+
+Privacy
+
+“Having a say in how information about you is shared and used.”
+
+Respect
+
+“Taking other people’s feelings, ideas, and choices seriously.”
+
+Responsibility
+
+“Thinking about how your actions affect others and taking ownership of your choices.”
+
+Clicking any card must open a dedicated value detail page.
+
+All six cards must work.
+
+⸻
+
+7. Screen 3: Value Detail Page
+
+Create a reusable component that dynamically displays the selected value.
+
+For example:
+
+Privacy
+
+What does it mean?
+
+“Privacy means having a say in how information about you is shared and used.”
+
+What might this look like when using AI?
+
+Display a realistic example:
+
+“Before uploading a friend’s photo to an AI tool, you could ask whether they’re comfortable with you sharing it.”
+
+Think About It
+
+“What information would you want someone to ask permission before sharing?”
+
+Provide a text input for Sarah’s response.
+
+What does this value mean to you?
+
+Text area with placeholder:
+
+“To me, privacy means…”
+
+How might this value guide your AI use?
+
+Text area with placeholder:
+
+“When using AI, I want to…”
+
+Buttons:
+
+Save to My Values Board
+
+Back to Explore Values
+
+Each of the six values needs its own meaningful example and reflection question.
+
+Do not repeat the same generic explanation for every value.
+
+Saving a value should store:
+
+* Value ID
+* Personal definition
+* Personal AI-use guideline
+* Reflection
+* Date last updated
+
+Students can return and edit their answers.
+
+⸻
+
+8. Screen 4: My Values Board
+
+Title:
+
+My Values Board
+
+Subtitle:
+
+“These are the values you’re exploring. Your ideas can change as you learn.”
+
+Display up to five selected values.
+
+Students do not need to select all five immediately.
+
+Each value card includes:
+
+* Value name and icon
+* Personal definition
+* Personal AI-use guideline
+* Edit button
+* Remove button
+
+Allow drag-and-drop reordering.
+
+Provide an Add a Value button when fewer than five values have been selected.
+
+If five values are already selected, explain that Sarah can replace an existing value.
+
+Do not silently delete existing work.
+
+Display a small message:
+
+“You can always come back to rethink or update your values.”
+
+Include a button:
+
+Practice with a Dilemma
+
+⸻
+
+9. Screen 5: Choose a Dilemma
+
+Title:
+
+Let’s Think Through a Dilemma
+
+Subtitle:
+
+“Sometimes, different values matter at the same time. Explore a situation and decide what you would do.”
+
+Display three interactive scenario cards.
+
+Dilemma 1: The Group Project
+
+Themes: Respect, Fairness, Independence, Privacy, Responsibility
+
+Dilemma 2: A Convincing AI Answer
+
+Themes: Honesty, Independence, Responsibility
+
+Dilemma 3: A Friend’s Photo
+
+Themes: Privacy, Respect, Responsibility, Fairness
+
+Each card includes:
+
+* Scenario title
+* Short description
+* Relevant value tags
+* Button: Explore This Dilemma
+
+Students should be able to complete the scenarios in any order.
+
+Save completion and reflection progress separately for each dilemma.
+
+⸻
+
+10. Dilemma 1: The Group Project
+
+Scenario
+
+“You’re working on a group presentation with three classmates. Your presentation is tomorrow.
+
+One teammate, Alex, has been having trouble writing their part in English. Alex has worked hard on it but feels nervous about presenting.
+
+You know an AI tool that could help improve the writing. Your teacher allows AI for editing, but students must explain how they used it.
+
+You want to help Alex and make sure your group does well. But you’re not sure whether you should suggest using AI.”
+
+Question
+
+What would you do next?
+
+Options:
+
+A. Ask Alex whether they’d like to use AI together to improve their section.
+
+B. Use AI to improve Alex’s section, then show Alex the changes.
+
+C. Keep Alex’s writing as it is.
+
+D. Suggest that Alex use AI on their own.
+
+E. I have another idea.
+
+If E is selected, display a text field.
+
+Do not immediately mark answers correct or incorrect.
+
+After selecting an option, move to a values reflection screen.
+
+⸻
+
+11. Dilemma 2: A Convincing AI Answer
+
+Scenario
+
+“You’re writing an essay about how social media affects teenagers.
+
+You ask an AI tool for information, and it gives you a convincing answer with several statistics.
+
+One statistic would make your argument much stronger.
+
+But when you look for the original study, you can’t find it.
+
+Your essay is due soon, and you’ve already spent a lot of time working on it.”
+
+Question
+
+What would you do next?
+
+Options:
+
+A. Use the statistic because the AI answer sounds convincing.
+
+B. Leave out the statistic until you can verify it.
+
+C. Ask the AI to provide more sources and check whether those sources are real.
+
+D. Rewrite the argument using information you’ve already verified.
+
+E. I have another idea.
+
+This scenario should explore tensions involving:
+
+* Honesty
+* Responsibility
+* Independence
+* Time pressure
+
+Make clear through the learning experience that AI-generated information can be inaccurate, even when presented confidently.
+
+Avoid implying that fabricated evidence becomes acceptable because a student personally values efficiency.
+
+⸻
+
+12. Dilemma 3: A Friend’s Photo
+
+Scenario
+
+“Your friend Maya posts a photo of herself online.
+
+You think it would be fun to use an AI image tool to turn the photo into a cartoon.
+
+You want to share the result in your group chat.
+
+Maya has shared photos with your friends before, but you’ve never asked whether she’s comfortable with her pictures being uploaded to an AI tool.
+
+The AI tool also asks you to upload the original photo.”
+
+Question
+
+What would you do next?
+
+Options:
+
+A. Upload the photo and share the cartoon because Maya posted the original publicly.
+
+B. Ask Maya whether she’s comfortable with you using her photo.
+
+C. Create the cartoon but don’t share it.
+
+D. Choose a different image that doesn’t show a real person.
+
+E. I have another idea.
+
+This scenario should explore:
+
+* Privacy
+* Respect
+* Responsibility
+* Consent
+* Potential consequences of sharing personal information
+
+Do not treat posting a photo publicly as automatic permission for someone else to upload it to an AI service.
+
+⸻
+
+13. Shared Dilemma Interaction Flow
+
+All three dilemmas must follow the same interactive structure.
+
+Step A: Read the Scenario
+
+Show the situation clearly.
+
+Include:
+
+* Scenario title
+* Story
+* Relevant illustration or icon
+* Possible actions
+
+Button: Continue
+
+Step B: Choose an Action
+
+Allow students to select a response.
+
+They can also write their own idea.
+
+Button: Explore My Choice
+
+Step C: Identify Relevant Values
+
+Title:
+
+Which Values Matter Here?
+
+Question:
+
+“Which values do you think are important in this situation?”
+
+Show all six values.
+
+Students can select multiple values.
+
+Then ask:
+
+“Why do these values matter to you here?”
+
+Provide an optional reflection field.
+
+Button: Continue
+
+Step D: Explore Value Tensions
+
+Title:
+
+When Values Pull in Different Directions
+
+Display two relevant values side by side.
+
+For example:
+
+Respect:
+
+“Taking other people’s feelings, ideas, and choices seriously.”
+
+Fairness:
+
+“Considering whether people have fair opportunities.”
+
+Question:
+
+“How might these values lead you to think about the situation differently?”
+
+Allow a short written response.
+
+Button: Continue
+
+Step E: Explore Possible Consequences
+
+Title:
+
+What Might Happen Next?
+
+Display:
+
+* Possible benefits of the selected action
+* Possible concerns
+* Another person’s perspective
+* A question to consider
+
+These should be specifically written for each scenario and response.
+
+Do not generate generic consequences.
+
+Do not present every option as equally safe or acceptable.
+
+Where relevant, clearly explain factual considerations such as privacy, consent, AI inaccuracies, and school rules.
+
+Button: Think About My Decision
+
+Allow students to return and explore another option.
+
+Step F: Make or Reconsider the Decision
+
+Ask:
+
+“After thinking about the possibilities, what would you choose?”
+
+Allow students to keep their original choice or select a different one.
+
+Ask:
+
+“What matters most in your decision?”
+
+Provide a text field.
+
+Button: Continue to My Values
+
+⸻
+
+14. Screen: Rank Your Values
+
+This is one of the most important interactions.
+
+After each dilemma, students should revisit their values and consider whether their priorities have changed.
+
+Title:
+
+What Mattered Most to You?
+
+Subtitle:
+
+“Different situations can bring different values to the front. Think about which values mattered most in this decision.”
+
+Display Sarah’s selected values as draggable cards.
+
+Allow Sarah to arrange them from:
+
+Most important in this situation
+
+to
+
+Less important in this situation
+
+Include an accessible alternative to drag-and-drop, such as Move Up and Move Down controls.
+
+Do not imply that lower-ranked values are unimportant.
+
+After ranking, show a comparison:
+
+Before This Dilemma
+
+Sarah’s previous ranking.
+
+In This Dilemma
+
+Sarah’s current ranking.
+
+Question:
+
+“Did anything change? What made you think differently?”
+
+Allow a short response.
+
+Buttons:
+
+Save This Ranking
+
+I’m Still Thinking
+
+Important:
+
+Rankings are contextual, not permanent moral judgments.
+
+Do not automatically overwrite Sarah’s overall Values Board order.
+
+Store rankings separately for each dilemma.
+
+Students can choose whether to update the order of their main board afterward.
+
+⸻
+
+15. Screen: Reflect and Revise
+
+Title:
+
+What Did You Learn About Your Values?
+
+Ask:
+
+“What was difficult about this decision?”
+
+“Did you notice two values that were hard to balance?”
+
+“Has this experience changed how you think about any of your values?”
+
+Provide four choices:
+
+* My understanding has changed.
+* I understand one of my values more clearly now.
+* I want to keep my current guideline.
+* I’m still thinking about it.
+
+If Sarah wants to revise a value, show her current definition and guideline alongside editable fields.
+
+Buttons:
+
+Keep My Guideline
+
+Save My Changes
+
+Come Back Later
+
+Never force a student to revise their values.
+
+Never automatically rewrite their personal guidelines.
+
+Save a reflection history so Sarah can revisit earlier interpretations.
+
+⸻
+
+16. Screen: My Evolving Values Guide
+
+Title:
+
+My AI Values Guide
+
+Subtitle:
+
+“A guide you create and keep building as you learn.”
+
+Display Sarah’s selected values.
+
+Each value should include:
+
+1. Value name
+2. Personal definition
+3. Personal AI-use guideline
+4. Edit option
+
+Example:
+
+Independence
+
+What it means to me
+
+“Thinking for myself while knowing when to ask for help.”
+
+How I want to use AI
+
+“I will use AI to explore ideas and understand concepts, but I will make my own decisions about my work.”
+
+Provide a section called:
+
+My Learning Reflections
+
+Show saved reflections from completed dilemmas.
+
+Allow Sarah to view how her understanding has changed over time.
+
+Keep reflection history private by default.
+
+Include a separate, clearly labeled section:
+
+Responsible AI Basics
+
+Cover foundational practices:
+
+* Check important information.
+* Protect personal information.
+* Ask permission before sharing someone else’s information.
+* Follow school rules about AI use.
+* Think about how AI-generated content may affect others.
+
+Distinguish these foundational practices from Sarah’s personally selected values.
+
+⸻
+
+17. Screen: Design My Guide
+
+Create an interactive poster and wallpaper editor.
+
+Title:
+
+Make Your Guide Your Own
+
+Subtitle:
+
+“Choose how your guide looks. You can change it anytime.”
+
+Layout options
+
+* Printable poster
+* Desktop wallpaper
+* Phone wallpaper
+
+Design tools
+
+* Background color
+* Color theme
+* Font style
+* Value icons
+* Stickers
+* Layout arrangement
+
+Allow students to:
+
+* Change the theme
+* Choose stickers
+* Rearrange value cards
+* Preview different formats
+* Edit the content of their guide
+
+Use a two-column editor layout.
+
+Left panel:
+
+Design tools and customization options.
+
+Right panel:
+
+Live preview of the guide.
+
+All customization controls must work.
+
+Export options
+
+Buttons:
+
+Download Image
+
+Download PDF
+
+Print My Guide
+
+Save My Design
+
+Use actual browser-compatible export functionality.
+
+The export should include the student’s selected values, definitions, and actionable guidelines, not merely their names.
+
+Keep the guide readable when printed.
+
+Do not include private reflection history in exports by default.
+
+⸻
+
+18. Settings and Privacy
+
+Create a functional Settings page.
+
+Include:
+
+Accessibility
+
+* Larger text
+* Reduced motion
+* High contrast
+
+My Learning Data
+
+* View saved reflections
+* Delete a reflection
+* Reset demo progress
+
+Privacy
+
+Explain in student-friendly language:
+
+“Your Values Guide and reflections are saved in this browser for this demo.”
+
+Do not imply that data is securely stored in a school account or cloud service.
+
+Do not include unnecessary public sharing features.
+
+Do not add leaderboards, ethical scores, or comparisons with other students.
+
+⸻
+
+19. Interaction and State Requirements
+
+The prototype must maintain consistent state across screens.
+
+For example:
+
+If Sarah edits her definition of Independence, that updated definition should appear in:
+
+* Her Values Board
+* Her Values Guide
+* The guide editor
+* The exported poster
+
+If Sarah completes a dilemma, her response, ranking, and reflection should be saved.
+
+Returning to a completed dilemma should allow her to review her previous response or try it again.
+
+Do not erase earlier reflections when she retries a scenario.
+
+Include realistic demo data for Sarah, but distinguish demo data from user-entered content.
+
+Add a Reset Demo button.
+
+⸻
+
+20. Educational Design Principles
+
+This application is intended for students, so wording must be carefully designed.
+
+Follow these principles:
+
+Use student-friendly language.
+
+Avoid unexplained terms such as “ethical framework,” “algorithmic accountability,” or “value prioritization.”
+
+Encourage independent judgment.
+
+Avoid telling students which personal value they should prioritize.
+
+Avoid moral scoring.
+
+Do not use “Correct!” or “Wrong!” for nuanced ethical choices.
+
+Recognize meaningful constraints.
+
+Personal values do not override privacy, consent, safety, or school rules.
+
+Support uncertainty.
+
+Include opportunities to say “I’m not sure yet.”
+
+Encourage perspective-taking.
+
+Help students consider how their decisions might affect other people.
+
+Respect student autonomy.
+
+Students should decide whether to revise their personal guidelines.
+
+Support ongoing learning.
+
+The Values Guide should remain editable throughout the experience.
+
+Use these Stanford resources as educational references:
+
+Stanford CRAFT:
+https://craft.stanford.edu/resource/what-principles-should-guide-ethical-use-of-ai/
+
+Stanford HAI K–12 Education:
+https://hai.stanford.edu/education/k-12
+
+Use these resources for educational grounding, not as visual templates.
+
+Do not claim that Stanford endorses White Box.
+
+⸻
+
+21. Required Deliverables
+
+Build a complete working prototype containing:
+
+1. Home dashboard
+2. Values Explorer
+3. Six individual value detail experiences
+4. Editable Values Board
+5. Three fully written ethical dilemmas
+6. Scenario decision screens
+7. Value identification screens
+8. Value conflict exploration
+9. Scenario-specific consequence exploration
+10. Post-dilemma value ranking
+11. Before-and-after ranking comparison
+12. Reflection and revision
+13. Evolving Values Guide
+14. Interactive guide designer
+15. Working export functionality
+16. Settings and privacy controls
+
+All three dilemmas must be functional.
+
+All six values must have their own definitions, examples, and reflection questions.
+
+All screens must connect through working navigation.
+
+Use meaningful student-facing text throughout. Do not leave placeholder content.
+
+22. Final Quality Check
+
+Before finishing, test the following complete journey:
+
+Sarah opens White Box.
+
+She explores Honesty and Independence.
+
+She writes personal definitions and saves them.
+
+She opens her Values Board.
+
+She begins the Group Project dilemma.
+
+She chooses an action.
+
+She identifies relevant values.
+
+She explores competing values and possible consequences.
+
+She reconsiders her decision.
+
+She ranks her values for that dilemma.
+
+She compares her ranking with her earlier priorities.
+
+She revises her understanding of Respect.
+
+She returns to her Values Board and sees the updated guideline.
+
+She completes the other two dilemmas.
+
+She opens her evolving AI Values Guide.
+
+She customizes the colors, fonts, layout, and stickers.
+
+She downloads a printable guide.
+
+She returns later and edits one of her values.
+
+The changes persist.
+
+The prototype is only complete when this entire journey works without broken buttons, dead-end screens, or inconsistent saved data.
+
+Prioritize thoughtful educational interactions, clear information architecture, and functional behavior over unnecessary visual effects.
+
+Build the application now.

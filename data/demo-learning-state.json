@@ -1,0 +1,32 @@
+{
+  "board": [
+    {
+      "id": "respect",
+      "definition": "Making room for other people’s ideas and choices.",
+      "guideline": "I will ask before changing someone else’s work with AI.",
+      "reflection": "",
+      "updated": "",
+      "sample": true
+    }
+  ],
+  "explored": [
+    "respect"
+  ],
+  "history": [],
+  "drafts": {},
+  "design": {
+    "format": "poster",
+    "theme": "Pastel",
+    "background": "#fff3ce",
+    "font": "Editorial",
+    "icons": true,
+    "sticker": "Sparkles",
+    "arrangement": "stack",
+    "order": []
+  },
+  "settings": {
+    "larger": false,
+    "motion": false,
+    "contrast": false
+  }
+}
